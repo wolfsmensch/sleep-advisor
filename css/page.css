@@ -1,0 +1,19 @@
+:root {
+    --main-color: #d5d8dc;
+    --sec-color: #808b96;
+    --main-bg-color: #2c3e50;
+}
+
+body {
+    color: var(--main-color);
+    background-color: var(--main-bg-color);
+    font-family: sans-serif;
+}
+
+main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
