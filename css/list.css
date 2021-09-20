@@ -24,7 +24,15 @@ main > .list {
 }
 
 .list > .card > .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 25%;
+}
+
+.list > .card > .icon img {
+    width: 65%;
+    height: auto;
 }
 
 .list > .card > .desc {
@@ -55,4 +63,10 @@ main > .list {
 .desc .remain {
     font-size: .7em;
     margin-top: 5px;
+}
+
+.card .control {
+    cursor: pointer;
+    background: transparent;
+    border: none;
 }
