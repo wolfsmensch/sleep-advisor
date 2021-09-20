@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="assets/normalize.css">
     <link rel="stylesheet" href="css/page.css">
     <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/form.css">
 
     <title>Sleep Advisor</title>
 </head>
 <body>
     <main>
-        <section class="list">
+
+        <section class="list hidden">
             <div class="card" id="card-blue-filter">
                 <div class="icon"><img src="media/eye.svg" alt="Фильтр синего"></div>
                 <div class="desc">
@@ -55,6 +57,21 @@
                 <button class="control"><img src="media/edit.svg" alt="Редактировать"></button>
             </div>
         </section>
+
+        <section class="form" id="set-time">
+            <div class="row ta-right">
+                <button class="close btn btn-icon">
+                    <img src="media/x.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="row fx-center fx-grow">
+                <input type="time" class="time-picker" name="wakeup-time" id="wakeup-time" value="06:50" required>
+            </div>
+            <div class="row ta-center">
+                <button class="btn fw">Установить время</button>
+            </div>
+        </section>
+
     </main>
 </body>
 </html>
