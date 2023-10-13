@@ -10,18 +10,20 @@
     <link rel="stylesheet" href="css/list.css">
     <link rel="stylesheet" href="css/form.css">
 
+    <script src="js/main.js"></script>
+
     <title>Sleep Advisor</title>
 </head>
 <body>
     <main>
 
-        <section class="list hidden">
+        <section class="list">
             <div class="card" id="card-blue-filter">
                 <div class="icon"><img src="media/eye.svg" alt="Фильтр синего"></div>
                 <div class="desc">
                     <div class="time">21:20</div>
                     <div class="title">Включить фильтр синего</div>
-                    <div class="remain">через 3 часа 29 минут</div>
+                    <!--<div class="remain">через 3 часа 29 минут</div>-->
                 </div>
             </div>
             <div class="card" id="card-lights">
@@ -29,7 +31,7 @@
                 <div class="desc">
                     <div class="time">22:20</div>
                     <div class="title">Приглушить свет до 10%</div>
-                    <div class="remain">через 4 часа 29 минут</div>
+                    <!--<div class="remain">через 4 часа 29 минут</div>-->
                 </div>
             </div>
             <div class="card" id="card-ventilate">
@@ -37,7 +39,7 @@
                 <div class="desc">
                     <div class="time">22:45</div>
                     <div class="title">Проветрить и охладить комнату</div>
-                    <div class="remain">через 5 часа 29 минут</div>
+                    <!--<div class="remain">через 5 часа 29 минут</div>-->
                 </div>
             </div>
             <div class="card" id="card-go-sleep">
@@ -45,10 +47,10 @@
                 <div class="desc">
                     <div class="time">23:00</div>
                     <div class="title">Лечь спать</div>
-                    <div class="remain">через 5 часа 29 минут</div>
+                    <!--<div class="remain">через 5 часа 29 минут</div>-->
                 </div>
             </div>
-            <div class="card bottom with-controls" id="card-go-sleep">
+            <div class="card bottom with-controls" id="target-wakeup-time">
                 <div class="icon"><img src="media/sun.svg" alt="Проснуться"></div>
                 <div class="desc">
                     <div class="time">6:30</div>
@@ -58,7 +60,7 @@
             </div>
         </section>
 
-        <section class="form" id="set-time">
+        <section class="form hidden" id="set-time">
             <div class="row ta-right">
                 <button class="close btn btn-icon">
                     <img src="media/x.svg" alt="Закрыть">
