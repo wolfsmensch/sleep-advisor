@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/list.css">
     <link rel="stylesheet" href="css/form.css">
 
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 
     <title>Sleep Advisor</title>
 </head>
@@ -61,7 +61,7 @@
                     <div class="time">6:30</div>
                     <div class="title">Проснуться</div>
                 </div>
-                <button class="control"><img src="media/edit.svg" alt="Редактировать"></button>
+                <button class="control" id="show-time-form"><img src="media/edit.svg" alt="Редактировать"></button>
             </div>
         </section>
 
@@ -75,7 +75,7 @@
                 <input type="time" class="time-picker" name="wakeup-time" id="wakeup-time" value="06:50" required>
             </div>
             <div class="row ta-center">
-                <button class="btn fw">Установить время</button>
+                <button id="set-time-btn" class="btn fw">Установить время</button>
             </div>
         </section>
 
