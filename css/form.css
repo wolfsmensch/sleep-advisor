@@ -26,6 +26,7 @@
 input.time-picker {
     color: var(--main-color);
     background: transparent;
+    width: 50%;
     border: none;
     padding: .35em;
     font-size: 3em;
