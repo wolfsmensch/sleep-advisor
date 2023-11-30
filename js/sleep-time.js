@@ -1,4 +1,5 @@
 import Time from "./time.js";
+import storage from "./storage.js";
 
 export default class SleepTime {
     prepSections = [
@@ -31,6 +32,7 @@ export default class SleepTime {
     set targetTime(time)
     {
         this._targetTime = time;
+        storage.targetTime = time.toString();
         this.calculateSectionsTargetTime();
     }
 

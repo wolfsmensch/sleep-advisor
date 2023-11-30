@@ -1,7 +1,7 @@
 import UIController from "./ui.js";
 import Time from "./time.js";
 import SleepTime from "./sleep-time.js";
-
+import storage from "./storage.js";
 
 const uiController = new UIController(
     '#set-time',
@@ -12,8 +12,8 @@ const uiController = new UIController(
     );
 
 const sleepTime = new SleepTime(
-    new Time(8, 0),
-    new Time(8, 0),
+    storage.hasTargetTime() ? Time.getFromString(storage.targetTime) : new Time(8, 0),
+    new Time(8, 30),
     (uiController.updateTimeSections).bind(uiController)
     );
 
