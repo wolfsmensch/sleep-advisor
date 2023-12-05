@@ -59,3 +59,10 @@ main > .form {
 
     padding: 1em;
 }
+
+@media (orientation: landscape) {
+    main {
+        width: 425px;
+        margin: auto;
+    }
+}
