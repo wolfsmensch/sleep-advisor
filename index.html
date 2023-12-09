@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
     <script type="module" src="js/main.js"></script>
 
     <title>Sleep Advisor</title>
@@ -24,33 +25,41 @@
             <div class="card" id="card-blue-filter">
                 <div class="icon"><img src="media/eye.svg" alt="Фильтр синего"></div>
                 <div class="desc">
-                    <div class="time">21:20</div>
+                    <div class="time">
+                        <span class="time-value">21:20</span>
+                        <span class="remaining-time">9:40</span>
+                    </div>
                     <div class="title">Включить фильтр синего</div>
-                    <!--<div class="remain">через 3 часа 29 минут</div>-->
                 </div>
             </div>
             <div class="card" id="card-lights">
                 <div class="icon"><img src="media/loader.svg" alt="Приглушить свет"></div>
                 <div class="desc">
-                    <div class="time">22:20</div>
+                    <div class="time">
+                        <span class="time-value">21:20</span>
+                        <span class="remaining-time">9:40</span>
+                    </div>
                     <div class="title">Приглушить свет до 10%</div>
-                    <!--<div class="remain">через 4 часа 29 минут</div>-->
                 </div>
             </div>
             <div class="card" id="card-ventilate">
                 <div class="icon"><img src="media/wind.svg" alt="Проветрить комнату"></div>
                 <div class="desc">
-                    <div class="time">22:45</div>
+                    <div class="time">
+                        <span class="time-value">21:20</span>
+                        <span class="remaining-time">9:40</span>
+                    </div>
                     <div class="title">Проветрить и охладить комнату</div>
-                    <!--<div class="remain">через 5 часа 29 минут</div>-->
                 </div>
             </div>
             <div class="card" id="card-go-sleep">
                 <div class="icon"><img src="media/moon.svg" alt="Лечь спать"></div>
                 <div class="desc">
-                    <div class="time">23:00</div>
+                    <div class="time">
+                        <span class="time-value">21:20</span>
+                        <span class="remaining-time">9:40</span>
+                    </div>
                     <div class="title">Лечь спать</div>
-                    <!--<div class="remain">через 5 часа 29 минут</div>-->
                 </div>
             </div>
             <div class="card bottom with-controls" id="target-wakeup-time">

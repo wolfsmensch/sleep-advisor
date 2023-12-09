@@ -4,19 +4,23 @@ import storage from "./storage.js";
 export default class SleepTime {
     prepSections = [
         {
-            domSelector: '#card-blue-filter .time',
+            domRoot: '#card-blue-filter .time',
+            domSelector: '#card-blue-filter .time .time-value',
             time: new Time(2, 10),
         },
         {
-            domSelector: '#card-lights .time',
+            domRoot: '#card-lights .time',
+            domSelector: '#card-lights .time .time-value',
             time: new Time(1, 40),
         },
         {
-            domSelector: '#card-ventilate .time',
+            domRoot: '#card-ventilate .time',
+            domSelector: '#card-ventilate .time .time-value',
             time: new Time(0, 55),
         },
         {
-            domSelector: '#card-go-sleep .time',
+            domRoot: '#card-go-sleep .time',
+            domSelector: '#card-go-sleep .time .time-value',
             time: new Time(0, 40),
         },
     ];
@@ -72,6 +76,7 @@ export default class SleepTime {
         for (const key in this.prepSections) {
             this.prepSections[key].target = new Date();
             this.prepSections[key].target.setTime(goSleepTime.getTime() - this.prepSections[key].time.msec);
+            this.prepSections[key].target.setDate((new Date()).getDate());  // Фиксим смещение даты на вчерашний день
         }
 
         this.updateCallback(this.prepSections, this.targetTime);
