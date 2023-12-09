@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "npx http-server ./"
+    "server": "npx http-server ./",
+    "watch": "sass --watch scss/:css/",
+    "build": "sass scss/:css/ --style=compressed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "sass": "^1.69.5"
   }
 }
