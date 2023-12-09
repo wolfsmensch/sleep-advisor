@@ -41,7 +41,7 @@ export default class UIController {
 
         window.setInterval(
             (this.updateRemainingTimeSections).bind(this),
-            (1000 * 30)
+            (1000 * 5)
             );
     }
 
