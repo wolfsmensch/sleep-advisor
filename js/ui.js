@@ -41,7 +41,7 @@ export default class UIController {
 
         window.setInterval(
             (this.updateRemainingTimeSections).bind(this),
-            (1000 * 5)
+            (1000 * 4)
             );
     }
 
@@ -88,9 +88,28 @@ export default class UIController {
 
     updateRemainingTimeSections()
     {
-        const currentTime = moment(Date.now());
+        function calcTimeDiff(target)
+        {
+            const currentTime = moment(Date.now());
+            const targetTime = moment(target.getTime());
+            const timeDiff = moment.duration( targetTime.diff(currentTime) );
 
-        console.log('updateRemainingTimeSections');
+            if ((timeDiff.hours() < 0) || (timeDiff.minutes() < 0))
+            {
+                if (target.getHours() <= 4)
+                {
+                    const tomorrowDate = new Date(target.getTime());
+                    tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+                    return calcTimeDiff(tomorrowDate);
+                }
+                else
+                {
+                    return null;
+                }
+            }
+
+            return timeDiff;
+        }
 
         // Если еще неизвестны временные секции
         if (this.sleepTimeSections == null)
@@ -107,8 +126,7 @@ export default class UIController {
         // Если время секций известно
         for(const section of this.sleepTimeSections)
         {
-            const targetTime = moment(section.target.getTime());
-            const timeDiff = moment.duration( targetTime.diff(currentTime) );
+            const timeDiff = calcTimeDiff(section.target);
 
             const querySelector = `${section.domRoot} ${UIController.RemainingTimeSelector}`;
             const remainingElement = document.querySelector(querySelector);
@@ -118,7 +136,14 @@ export default class UIController {
                 continue;
             }
 
-            remainingElement.innerText = (new Time(timeDiff.hours(), timeDiff.minutes())).toString();
+            if (timeDiff !== null)
+            {
+                remainingElement.innerText = (new Time(timeDiff.hours(), timeDiff.minutes())).toString();
+            }
+            else
+            {
+                remainingElement.innerText = '';
+            }
         }
     }
 }
